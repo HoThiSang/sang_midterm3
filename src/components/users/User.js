@@ -143,7 +143,14 @@ const User = () => {
     // This is the small exercise for students
     // Students will write the code to fetch the user's repositories
     // Then display the repositories in the User component
+    try {
+        const response = await axios.get(`https://api.github.com/users/${id}/repos`);
+        setRepos(response.data);
+      } catch (error) {
+        console.error("Error fetching repositories:", error.message);
+      }
   };
+  
   useEffect(() => {
     getUser(id);
     getUserRepos(id);
