@@ -29,7 +29,7 @@ const User = () => {
     useEffect(()=>{
         getUser(id);
         getUserRepos(id);
-    }, []);
+    }, [getUser, id]);
 
     const {
         name,
@@ -79,14 +79,38 @@ const User = () => {
             className="btn btn-dark my-1"
             target="_blank"
             rel="nooperer noreferrer"
-        >
+        >Show GitHub Profile
         </a>
         <ul>
             <li>
-                
+                {login && ( 
+                    <Fragment>
+                        <strong>Username: </strong>
+                        {login}
+                    </Fragment>
+                )}
+            </li>
+            <li>
+            {/* --------------bio or blog  */}
+                {bio && (
+                    <Fragment>
+                        <strong>Website: </strong>
+                        <a href={bio} target="_blank" rel="noopener noreferrer">
+                            {bio}
+                        </a>
+                    </Fragment>
+                    )
+                }
             </li>
         </ul>
        </div> 
+       <div className="card text-center">
+       <div className="badge badge-primary">Followers : {followers}</div>
+       <div className="badge badge-success">Following : {following}</div>
+       <div className="badge badge-light">Repository  : {public_repos}</div>
+       <div className="badge badge-dark">Gist : {public_gists}</div>
+       </div>
+        <Repos repos={repos} />
         </Fragment>
     )
 }
