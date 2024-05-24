@@ -6,12 +6,12 @@ const Search = () => {
   const [text, setText] = useState("");
   const [users, setUsers] = useState([]);
 
-  const searchUser = async text => {
+  const searchUser = async (text) => {
     try {
       const response = await axios.get(
         `https://api.github.com/search/users?q=${text}`
       );
-      setUsers(response.data.item);
+      setUsers(response.data.items);
     } catch (error) {
       console.log("Error fetching data :", error);
     }
@@ -50,11 +50,11 @@ const Search = () => {
           className="btn btn-success btn-block"
         />
       </form>
-      {users.length>0 && (
+      {/* {users.length>0 && (
         <button className="btn btn-danger btn-block" onClick={clearUser}>
             Clear
         </button>
-      )}
+      )} */}
       <Users users={users} />
     </div>
   );

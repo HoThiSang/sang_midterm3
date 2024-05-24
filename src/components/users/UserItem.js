@@ -7,9 +7,9 @@ function UserItem(props){
     return (
         <div className="card text-center">
                 <img
-                        src={avatar_url}
-                        alt=""
-                        className="round-img"
+                    src={avatar_url}
+                    alt=""
+                    className="round-img"
                         style={{ width:"60px" }}
                  />
                  <h3>{login}</h3>
