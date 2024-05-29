@@ -8,7 +8,6 @@ import Home from "./components/layout/Home";
 const App = () => {
   return (
     <div className="App">
-    {/* <Book /> */}
       <Router>
         <NavBar />
         <Home />

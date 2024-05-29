@@ -7,6 +7,8 @@
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
+  --bg-color: #fff;
+  --text-color: #333;
 }
 
 * {
@@ -21,6 +23,13 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark-theme {
+  --bg-color: #333;
+  --text-color: #fff;
 }
 
 a {
