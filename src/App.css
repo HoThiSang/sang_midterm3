@@ -35,18 +35,18 @@ body {
 }
 .icon-button-dark {
   font-size: 30px;
-  color: yellow;
+  color:yellow ;
 }
-.button-model {
-  border: none;
-  width: 3em;
+.button-model{
+  border:none;
+  width:3em;
   height: 2.5em;
   border-radius: 20px;
   background-color: #333;
 }
 .icon-button-light {
   font-size: 30px;
-  color: yellow;
+  color:yellow ;
 }
 .light {
   background-color: #333;
