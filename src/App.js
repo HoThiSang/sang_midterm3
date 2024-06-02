@@ -2,14 +2,15 @@ import { BrowserRouter as Router } from "react-router-dom";
 import "./App.css";
 import NavBar from "./components/layout/Navbar";
 import Home from "./components/layout/Home";
-// import Book from "./components/users/Book";
-
+import { useContext } from "react";
+import { ThemeContext } from "./ThemeProvider";
 
 const App = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <div className="App">
+    <div className={`App ${theme}`}>
       <Router>
-        <NavBar />
+        <NavBar theme={theme} toggleTheme={toggleTheme}  />
         <Home />
       </Router>
     </div>

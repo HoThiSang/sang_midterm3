@@ -26,10 +26,38 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
-.dark-theme {
-  --bg-color: #333;
-  --text-color: #fff;
+.App {
+  min-height: 1000px;
+}
+.dark {
+  background-color: #fff;
+  color: #333;
+}
+.icon-button-dark {
+  font-size: 30px;
+  color: yellow;
+}
+.button-model {
+  border: none;
+  width: 3em;
+  height: 2.5em;
+  border-radius: 20px;
+  background-color: #333;
+}
+.icon-button-light {
+  font-size: 30px;
+  color: yellow;
+}
+.light {
+  background-color: #333;
+  color: #fff;
+  .btn-dark {
+    background-color: white;
+    color: black;
+  }
+  .repoName {
+    color: white;
+  }
 }
 
 a {
