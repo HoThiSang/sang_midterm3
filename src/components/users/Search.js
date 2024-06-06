@@ -1,6 +1,7 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState, useEffect } from "react";
 import Users from "./Users";
+import axiosService from "../services/api";
 
 const Search = () => {
   const [text, setText] = useState('');
@@ -15,8 +16,8 @@ useEffect(() => {
 }, []);
   const searchUser = async (text) => {
     try {
-      const response = await axios.get(
-        `https://api.github.com/search/users?q=${text}`
+      const response = await axiosService.get(
+        `/search/users?q=${text}`
       );
       setUsers(response.data.items);     
       localStorage.setItem('searchDetails', JSON.stringify({searchQuery:text,searchDetails:response.data.items}));
