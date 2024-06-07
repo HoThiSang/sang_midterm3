@@ -1,5 +1,5 @@
 const RepoItem = (props) => {
-  const { full_name, html_url, branches_url} = props.repo;
+  const { full_name, html_url} = props.repo;
   return (
       <div className="card">
           <a href={html_url} target="_blank" rel="noopener noreferrer" className="repoName">
